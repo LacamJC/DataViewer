@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-
+import DefaultData from '../default/DefaultData.json'
 import { Doughnut } from "react-chartjs-2"
 import styles from '../scss/Table.module.css'
+import toast, {Toaster} from 'react-hot-toast'
 function Table()
 {
 
     const [dados, setDados] = useState([])
     const [porcentagem, setPorcentagem] = useState([])
-
+    const notify = (msg)=> toast.success(msg)
     async function getData(){
         try{
             await fetch('http://localhost:3001/getData',{
@@ -23,10 +24,14 @@ function Table()
             })
             .catch(err=>{
                 console.log("ERO: "+err)
+                console.log(DefaultData)
+                setDados(DefaultData)
+                notify('Dados default, sem conexão com o servidor')
             })
         }   
         catch(err){
             console.log("Erro to fetch: "+err)
+            
         }
 
     }
@@ -111,6 +116,7 @@ function Table()
                 <Doughnut data={data} options={{ responsive: true }} width={'400'} height={'200'}/>
             </div>
         </div>
+        <Toaster/>
         </>
     )
 }

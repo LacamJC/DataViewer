@@ -1,0 +1,37 @@
+[
+    {
+        "name": "John",
+        "lastName": "Doe",
+        "participation": 87
+    },
+    {
+        "name": "Jane",
+        "lastName": "Smith",
+        "participation": 45
+    },
+    {
+        "name": "Alice",
+        "lastName": "Johnson",
+        "participation": 92
+    },
+    {
+        "name": "Bob",
+        "lastName": "Brown",
+        "participation": 61
+    },
+    {
+        "name": "Charlie",
+        "lastName": "Davis",
+        "participation": 72
+    },
+    {
+        "name": "David",
+        "lastName": "Miller",
+        "participation": 58
+    },
+    {
+        "name": "Eve",
+        "lastName": "Wilson",
+        "participation": 85
+    }
+]
