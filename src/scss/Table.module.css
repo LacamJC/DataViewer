@@ -14,8 +14,17 @@ th {
   background-color: rgb(238, 238, 238);
 }
 
+td {
+  text-align: center;
+}
+td:hover {
+  cursor: default;
+}
+
 .graph {
+  text-align: center;
   width: 300px;
+  padding: 20px 50px;
 }
 
 .content {

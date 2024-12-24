@@ -30,6 +30,8 @@ function Header()
             document.getElementById('name').value  = ""
             document.getElementById('lastName').value = ""
             document.getElementById('participation').value = ""
+
+            setTimeout(()=>{window.location.reload()},2000)
         })
         .catch(err=>{
             notifyError('Falha ao se comunicar com Api')

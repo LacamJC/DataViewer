@@ -7,6 +7,7 @@ function Table()
 {
 
     const [dados, setDados] = useState([])
+    const [porcentagem, setPorcentagem] = useState([])
 
     async function getData(){
         try{
@@ -38,17 +39,29 @@ function Table()
     }, [])
 
     var arrayNames = new Array()
-    var arrayParticipation = new Array()
+    var arrayPorcent = new Array()
     arrayNames.push(dados.map(data=>`${data.name}`))
-    arrayParticipation.push(dados.map(data=>data.participation))
-    console.log(arrayParticipation)
+    // arrayParticipation.push(dados.map(data=>data.participation))
+    var totalValue = 0
+    
+    dados.map((data, indice) =>{
+        totalValue += data.participation
+    })
+
+    dados.map(data=>{
+        arrayPorcent.push(
+            (data.participation * 100 / totalValue).toFixed(2)
+        )
+    })
+
+
     ChartJS.register(ArcElement, Tooltip, Legend);
     const data = {
         labels: dados.map(data=>data.name),
         datasets: [
           {
             label: '% De participação',
-            data: dados.map(data=>data.participation),
+            data: arrayPorcent,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -83,17 +96,18 @@ function Table()
                 </thead>
                 <tbody>
                     {dados ?
-                    dados.map(data=>(
+                    dados.map((data, index)=>(
                         <tr>
                             <td scope="row">{data.name}</td>
                             <td>{data.lastName}</td>
-                            <td>{data.participation}</td>
+                            <td>{arrayPorcent[index]}%</td>
                         </tr>
                     ))
                     : "NAO TEM DADOS"}
                 </tbody>
             </table>
             <div className={styles.graph}>
+                <h1>Gráfico de participações </h1>
                 <Doughnut data={data} options={{ responsive: true }} width={'400'} height={'200'}/>
             </div>
         </div>
