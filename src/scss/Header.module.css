@@ -19,9 +19,15 @@
   padding: 5px 10px;
 }
 .header .form .btn {
-  height: 25px;
+  height: 40px;
   width: 150px;
   border: 2px solid white;
   color: white;
+  font-weight: bold;
   background-color: transparent;
+  transition: 0.5s ease all;
+}
+.header .form .btn:hover {
+  background-color: white;
+  color: rgb(76, 189, 255);
 }/*# sourceMappingURL=Header.module.css.map */

@@ -96,7 +96,8 @@ function Table()
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Last name</th>
-                        <th scope="col">Participation</th>
+                        <th scope="col">Participation (value)</th>
+                        <th scope="col">Participation (%)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,10 +106,19 @@ function Table()
                         <tr>
                             <td scope="row">{data.name}</td>
                             <td>{data.lastName}</td>
+                            <td>{data.participation}</td>
                             <td>{arrayPorcent[index]}%</td>
                         </tr>
                     ))
+                    
                     : "NAO TEM DADOS"}
+                    
+                    <tr>
+                        <th className={styles.td}>Total</th>
+                        <th className={styles.td}></th>
+                        <th className={styles.td}>{totalValue}</th>
+                        <th className={styles.td}>100%</th>
+                    </tr>  
                 </tbody>
             </table>
             <div className={styles.graph}>

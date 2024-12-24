@@ -20,11 +20,17 @@
         }
 
         .btn{
-            height: 25px;
+            height: 40px;
             width: 150px;
             border: 2px solid white;
             color: white;
+            font-weight: bold;
             background-color: transparent;
+            transition: 0.5s ease all;
+            &:hover{
+                background-color: white;
+                color: rgb(76, 189, 255);
+            }
         }
     }
 
