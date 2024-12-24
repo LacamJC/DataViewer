@@ -1,0 +1,27 @@
+.header {
+  height: 150px;
+  background-color: rgb(76, 189, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.header .form .input {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.329);
+  border-radius: 5px;
+  height: 25px;
+  padding: 5px 10px;
+}
+.header .form .btn {
+  height: 25px;
+  width: 150px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}/*# sourceMappingURL=Header.module.css.map */

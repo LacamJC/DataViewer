@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.tabela {
+  width: 500px;
+}
+
+.tabela, th, td {
+  border-collapse: collapse; /*define a separação entre as bordar*/
+  padding: 10px;
+  text-align: left;
+  border: 1px solid rgb(161, 161, 161);
+}
+
+th {
+  background-color: rgb(238, 238, 238);
+}
+
+.graph {
+  width: 300px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 500px;
+}/*# sourceMappingURL=Table.module.css.map */

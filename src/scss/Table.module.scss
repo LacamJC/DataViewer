@@ -1,0 +1,30 @@
+
+.tabela{
+    width: 500px;
+    // margin: 250px auto;
+}
+
+.tabela, th, td{
+    border-collapse: collapse; /*define a separação entre as bordar*/
+    padding: 10px;
+    text-align: left;
+    border: 1px solid rgb(161, 161, 161);
+}
+th{
+    background-color: rgb(238, 238, 238);
+}
+
+
+.graph{
+    width: 300px;
+}
+
+.content{
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 500px;
+}
