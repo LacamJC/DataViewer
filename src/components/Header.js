@@ -1,5 +1,5 @@
 import styles from '../scss/Header.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import  toast, {Toaster} from "react-hot-toast"
 function Header()
 {
@@ -11,6 +11,7 @@ function Header()
         lastName : '',
         participation: 0 
     })
+
 
     async function handleSubmit(e){
         e.preventDefault()
@@ -103,5 +104,6 @@ function Header()
 
     )
 }
+
 
 export default Header
